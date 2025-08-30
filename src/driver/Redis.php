@@ -16,17 +16,10 @@ use BadFunctionCallException;
 use DateInterval;
 use DateTimeInterface;
 use RedisException;
-use Workerman\Coroutine\Pool;
 use Webman\ThinkCache\Driver;
 
 class Redis extends Driver
 {
-
-    /**
-     * @var Pool[]
-     */
-    protected static array $pools = [];
-
     /**
      * @var \Redis
      */
