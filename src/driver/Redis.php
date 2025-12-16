@@ -201,6 +201,9 @@ class Redis extends Driver
      */
     public function clearTag($keys): void
     {
+		if (empty($keys)) {
+            return;
+        }
         // 指定标签清除
         $this->handler->del($keys);
     }
